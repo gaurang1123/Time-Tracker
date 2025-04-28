@@ -1,0 +1,90 @@
+🧠 Suggested Component Breakdown:
+1. App
+The root component.
+
+Holds the global context (TaskContext) and provides state: tasks, setTasks.
+
+2. TaskManager
+The main wrapper for task-related UI.
+
+Renders:
+
+AddTaskButton
+
+TaskList
+
+3. AddTaskButton
+A button to add a new task.
+
+On click:
+
+Increments task number (taskN → taskN+1)
+
+Creates a task with default start/finish time
+
+Updates localStorage and context state
+
+4. TaskList
+Loops through tasks and renders each TaskItem.
+
+5. TaskItem
+Represents one task card.
+
+Displays:
+
+Task number
+
+Start time
+
+Finish time
+
+Duration
+
+Two buttons:
+
+Set Start Time
+
+Set Finish Time
+
+On button click:
+
+Captures current time
+
+Updates localStorage
+
+Updates context state
+
+Triggers rerender
+
+6. TimeDisplay
+A subcomponent used by TaskItem to show time in HH:MM format.
+
+Could also include the buttons to set time.
+
+🧩 Optional:
+7. TimeUtils (utility functions file)
+Handles:
+
+Getting current time
+
+Formatting time
+
+Calculating duration
+
+Updating task in localStorage
+
+🏁 Flow Summary:
+App provides context.
+
+TaskManager controls UI.
+
+AddTaskButton adds new tasks to localStorage + context.
+
+TaskList maps over tasks and renders TaskItems.
+
+Each TaskItem can set start/finish time and show time taken.
+
+
+
+
+
