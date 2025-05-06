@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import AddTaskBtn from "./AddTaskBtn"
 import ResetBtn from "./ResetBtn"
 import TaskList from "./TaskList"
+import Total from './Total'
 
 
 const TaskManager = () => {
@@ -10,6 +11,7 @@ const TaskManager = () => {
     <div className='btns_container'>
         <AddTaskBtn/>
         <ResetBtn/>
+        <Total/>
     </div>
         <TaskList/>
     </>
